@@ -1,5 +1,5 @@
 ﻿Public Class HomeController
-    Inherits System.Web.Mvc.Controller
+    Inherits Controller
 
     Function Index() As ActionResult
         Return View()
@@ -13,7 +13,7 @@
 
     Function Contact() As ActionResult
         ViewData("Message") = "Your contact page."
-
+        Throw New Exception("something bad happened")
         Return View()
     End Function
 End Class
